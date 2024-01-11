@@ -1,0 +1,9 @@
+{
+    "nombre": "Juan",
+    "edad": 25,
+    "ciudad": "Ciudad de Ejemplo",
+    "intereses": ["programación", "viajes", "lectura"],
+    "activo": true,
+    "version": "1.7.6"
+}
+  
