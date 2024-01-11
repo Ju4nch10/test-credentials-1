@@ -4,6 +4,9 @@
     "ciudad": "Ciudad de Ejemplo",
     "intereses": ["programación", "viajes", "lectura"],
     "activo": true,
-    "version": "1.7.6"
+    "version": "1.7.6",
+    "scripts": {
+        "test": "echo \"Esto es una prueba de JSON \""
+    }
 }
   
