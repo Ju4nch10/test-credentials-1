@@ -6,6 +6,28 @@ pipeline {
         IMAGE = 'hello-world'
     }
     stages {
+        stage('init') {
+            agent {
+                docker {
+                    image 'node:alpine'
+                    args '-u root:root'
+                }
+            }
+            steps {
+                sh 'npm install'
+            }
+        }
+        stage('Test') {
+            agent {
+                docker {
+                    image 'node:alpine'
+                    args '-u root:root'
+                }
+            }
+            steps {
+                sh 'npm run test'
+            }
+        }
         stage('Constuir imagen') {
             steps {
                 sh '''
