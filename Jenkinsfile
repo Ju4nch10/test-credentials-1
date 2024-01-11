@@ -7,7 +7,7 @@ pipeline {
     }
     stages {
         stage('Constuir imagen') {
-            steps
+            steps {
                 sh '''
                 VERSION=$(jq --raw-output .version package.json)
                 echo $VERSION >version.txt
