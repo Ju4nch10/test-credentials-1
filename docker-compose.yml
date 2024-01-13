@@ -1,0 +1,6 @@
+version: '3.8'
+services: 
+  backend:
+    image: jdinucci/hello-world:1.7.6
+    ports:
+      - "3001:3001"
