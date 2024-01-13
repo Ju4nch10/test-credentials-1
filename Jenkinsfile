@@ -46,5 +46,15 @@ pipeline {
                 '''
             }
         }
+        stage('Reemplazar palabras') {
+            steps {
+                sh '''
+                sed -i -- "s/REGISTRY/$REGISTRY/g" docker-compose.yml
+                sed -i -- "s/IMAGE/$IMAGE/g" docker-compose.yml
+                sed -i -- "s/TAG/$(cat version.txt)/g" docker-compose.yml
+                cat docker-compose.yml
+                '''
+            }
+        }
     }
 }
