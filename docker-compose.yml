@@ -1,6 +1,7 @@
 version: '3.8'
 services: 
   backend:
-    image: jdinucci/hello-world:1.7.6
+    container_name: hello-world
+    image: REGISTRY/IMAGE:TAG
     ports:
       - "3001:3001"
